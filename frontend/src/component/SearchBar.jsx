@@ -1,7 +1,29 @@
 import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+
+import { getData } from "../data";
 
 const SearchBar = () => {
+
+  const [query, setQuery] = useState('')
+
+
+  const handleSearch = async() =>
+  {
+    if(query !=='')
+    {
+      try{
+        const data = await getData(query)
+        console.log(data)
+
+      }
+      catch(err)
+      {
+        console.log(err)
+      }
+    }
+  }
+
   return (
     <Box position={'relative'} p={'1rem'} maxW={['100%','80%']} m="auto">
       <Flex w={'100%'} columnGap={"1rem"} alignItems={"center"}>
@@ -12,8 +34,8 @@ const SearchBar = () => {
         </Box>
         <Box width={'100%'}>
           <Flex columnGap={'1rem'}>
-            <Input width={"80%"} type="text" placeholder="Search..." />
-            <Button>Search</Button>
+            <Input width={"80%"} type="text" placeholder="Search..." onChange={(e)=>setQuery(e.target.value)} />
+            <Button onClick={handleSearch}>Search</Button>
           </Flex>
         </Box>
       </Flex>
