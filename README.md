@@ -1,1 +1,0 @@
-# strategy-global-movie-app
