@@ -10,15 +10,15 @@
 
 Image :
 ## Home page
-![Home page of website]()
+![Home page of website](./frontend/public/homepage0.png)
 
 
 ## Home page after search
-![Home page after search]()
+![Home page after search](./frontend/public/homepage.png)
 
 
 ## Detail page
-![Detail page]()
+![Detail page](./frontend/public/detailpage.png)
    
 
 
