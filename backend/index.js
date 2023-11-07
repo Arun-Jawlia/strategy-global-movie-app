@@ -1,5 +1,4 @@
 const express = require('express');
-// const axios = require('axios')
 const cors = require('cors');
 const { movieRouter } = require('./routes/movie.route');
 const app = express();

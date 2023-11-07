@@ -4,28 +4,13 @@ const apiKey = `55bb902d`
 
 
 
-// const getMovies = async(req,res) =>
-// {
-//     console.log(req)
-//        try
-//        {
-//         const omdb_url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`
-      
-//         const response = await axios.get(omdb_url)
-//         res.send(response.data.results)
-//        }
-//        catch(error)
-//        {
-//         console.log(error.message)
-//         res.status(500).json({error: 'Failed to fetch movies'})
-//        }
-// }
+
 const getMoviesBySearch = async(req,res) =>
 {
     console.log(req)
        try
        {
-        const movieName = req.query.search
+        const movieName = req.query.search 
         const omdb_url = `https://www.omdbapi.com/?s=${movieName}&apikey=${apiKey}`
        
         const response = await axios.get(omdb_url)
