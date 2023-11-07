@@ -20,7 +20,7 @@ const Movies = () => {
 
   return (
     <>
-      <Box p={"1rem"} MaxW="100%" h="100vh">
+      <Box position={'relative'}  w="100%" h="100vh">
         <SearchBar handleSearch={handleSearch} />
         <MovieList data={data} />
       </Box>

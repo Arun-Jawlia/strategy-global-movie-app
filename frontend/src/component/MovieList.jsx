@@ -20,8 +20,8 @@ const MovieList = ({ data }) => {
 
   return (
     <>
-      <Box height="fit-content" width={'100%'}>
-        <SimpleGrid columns={[1, 2, 3, 4]} padding={"1rem"} gap={"1rem"}>
+      <Box padding={'2rem'} height="fit-content" width={'100%'}>
+        <SimpleGrid columns={[1, 2, 3, 4]} gap={"1rem"}>
           { data.length>0 ? ( data?.map((item) => {
             return (
               <Box
